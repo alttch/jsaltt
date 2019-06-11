@@ -1,6 +1,6 @@
 {
   "name": "@altertech/cookies",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cookie tools",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/alttch/jsaltt/issues"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "homepage": "https://github.com/alttch/jsaltt"
 }
