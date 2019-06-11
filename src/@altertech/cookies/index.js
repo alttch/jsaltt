@@ -36,7 +36,7 @@ if (typeof exports === 'undefined') {
 }
 
 exports.read = read_cookie;
-exports.reate = create_cookie;
+exports.create = create_cookie;
 exports.erase = erase_cookie;
 
 if (typeof $cookies !== 'undefined') exports = undefined;
