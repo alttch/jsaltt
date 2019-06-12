@@ -38,7 +38,7 @@
     exports.erase = erase_cookie;
   }
 
-  if (typeof window !== 'undefined') {
+  if (typeof window === 'object') {
     window.$cookies = {
       read: read_cookie,
       create: create_cookie,
