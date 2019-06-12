@@ -3,33 +3,36 @@
 const chalk = require('chalk');
 
 function extend() {
-  var extended = {};
-  var deep = false;
-  var i = 0;
-  var length = arguments.length;
-  if (Object.prototype.toString.call(arguments[0]) === '[object Boolean]') {
-    deep = arguments[0];
-    i++;
-  }
-  var merge = function(obj) {
-    for (var prop in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, prop)) {
-        if (
-          deep &&
-          Object.prototype.toString.call(obj[prop]) === '[object Object]'
-        ) {
-          extended[prop] = arguments.callee(true, extended[prop], obj[prop]);
-        } else {
-          extended[prop] = obj[prop];
+  var extend_func = function() {
+    var extended = {};
+    var deep = false;
+    var i = 0;
+    var length = arguments.length;
+    if (Object.prototype.toString.call(arguments[0]) === '[object Boolean]') {
+      deep = arguments[0];
+      i++;
+    }
+    var merge = function(obj) {
+      for (var prop in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, prop)) {
+          if (
+            deep &&
+            Object.prototype.toString.call(obj[prop]) === '[object Object]'
+          ) {
+            extended[prop] = extend_func(true, extended[prop], obj[prop]);
+          } else {
+            extended[prop] = obj[prop];
+          }
         }
       }
+    };
+    for (; i < length; i++) {
+      var obj = arguments[i];
+      merge(obj);
     }
+    return extended;
   };
-  for (; i < length; i++) {
-    var obj = arguments[i];
-    merge(obj);
-  }
-  return extended;
+  return extend_func.apply(null, arguments);
 }
 
 function cmp(a, b) {
