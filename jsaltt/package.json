@@ -1,6 +1,6 @@
 {
   "name": "@altertech/jsaltt",
-  "version": "0.0.5",
+  "version": "0.0.11",
   "description": "JavaScript tools",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,8 +1,8 @@
 'use strict';
 
 (() => {
-  if (typeof require === 'function') {
-    const chalk = require('chalk');
+  if (typeof process !== 'undefined' && process.title !== 'browser') {
+    var chalk = require('chalk');
   }
 
   function extend() {
@@ -159,19 +159,16 @@
     }
   }
 
+  let logger = new Logging();
+
   if (typeof exports === 'object') {
-    exports.logger = new Logging();
+    exports.logger = logger;
     exports.Logging = Logging;
     exports.extend = extend;
     exports.cmp = cmp;
   }
 
   if (typeof window === 'object') {
-    window.jsaltt = {
-      logger: new Logging(),
-      extend: extend,
-      cmp: cmp
-    };
-    window.$log = window.jsaltt.logger;
+    window.$log = logger;
   }
 })();
