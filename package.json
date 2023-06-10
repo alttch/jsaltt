@@ -1,7 +1,7 @@
 {
-  "name": "@altertech/cookies",
-  "version": "0.0.5",
-  "description": "Cookie tools",
+  "name": "@altertech/jsaltt",
+  "version": "0.1.0",
+  "description": "TypeScript tools",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,13 +10,20 @@
     "url": "git+https://github.com/alttch/jsaltt.git"
   },
   "keywords": [
-    "cookies"
+    "tools",
+    "logging"
   ],
   "author": "Altertech",
+  "main": "src/lib.ts",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/alttch/jsaltt/issues"
   },
-  "dependencies": {},
-  "homepage": "https://github.com/alttch/jsaltt"
+  "dependencies": {
+    "chalk": "^5.2.0"
+  },
+  "homepage": "https://github.com/alttch/jsaltt",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
 }
