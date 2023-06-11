@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "declaration": true,
+    "target": "es5",
     "useDefineForClassFields": true,
-    "module": "ESNext",
+    "module": "commonjs",
     "lib": ["ES2020", "DOM", "DOM.Iterable", "ES2021.String"],
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
     "allowJs": true,
     "resolveJsonModule": true,
+    "outDir": "dist",
+    "esModuleInterop": true,
     "isolatedModules": true,
     "noEmit": true,
     "strict": true,
@@ -16,5 +18,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
