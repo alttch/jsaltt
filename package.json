@@ -4,7 +4,7 @@
   "description": "TypeScript tools",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc src/*.ts --declaration --emitDeclarationOnly --declarationDir dist/ && vite build",
     "preview": "vite preview"
   },
   "repository": {
@@ -17,6 +17,7 @@
   ],
   "author": "Altertech",
   "files":["dist"],
+  "types": "./lib.d.ts",
   "main":"./dist/jsaltt.umd.js",
   "module":"./dist/jsaltt.es.js",
   "exports": {
