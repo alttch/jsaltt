@@ -1,9 +1,11 @@
 {
   "name": "@altertech/jsaltt",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "TypeScript tools",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -14,7 +16,15 @@
     "logging"
   ],
   "author": "Altertech",
-  "main": "src/lib.ts",
+  "files":["dist"],
+  "main":"./dist/jsaltt.umd.js",
+  "module":"./dist/jsaltt.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/jsaltt.es.js",
+      "require": "./dist/jsaltt.umd.js"
+    }
+  },
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/alttch/jsaltt/issues"
@@ -24,6 +34,7 @@
   },
   "homepage": "https://github.com/alttch/jsaltt",
   "devDependencies": {
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.3",
+    "vite": "^4.3.9"
   }
 }
