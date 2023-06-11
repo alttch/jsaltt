@@ -1,4 +1,4 @@
-import { Logger } from "../..";
+import { Logger } from "../../dist/jsaltt.es.js";
 
 import colors from "colorts";
 
