@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 
 const lib_name = "jsaltt";
 
-module.exports = defineConfig({
+export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/lib.ts"),
