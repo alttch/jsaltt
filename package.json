@@ -1,6 +1,6 @@
 {
   "name": "@altertech/jsaltt",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "TypeScript tools",
   "scripts": {
     "dev": "vite",
