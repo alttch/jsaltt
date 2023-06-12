@@ -1,7 +1,8 @@
 {
   "name": "@altertech/jsaltt",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "TypeScript tools",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc src/*.mts --declaration --emitDeclarationOnly --declarationDir dist/ && mv dist/lib.d.mts dist/jsaltt.es.d.ts",
