@@ -66,7 +66,7 @@ class Logger {
   ) {
     if (this.can_colorize) {
       const output = (out: string[]) => {
-        if (out) {
+        if (out.length) {
           if (this.in_browser) {
             log_fn(`%c${out.join(" ")}`, css);
           } else if (this.colors) {
