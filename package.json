@@ -1,10 +1,10 @@
 {
   "name": "@altertech/jsaltt",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "TypeScript tools",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc src/*.ts --declaration --emitDeclarationOnly --declarationDir dist/",
+    "build": "vite build && tsc src/*.mts --declaration --emitDeclarationOnly --declarationDir dist/",
     "preview": "vite preview"
   },
   "repository": {
@@ -17,7 +17,7 @@
   ],
   "author": "Altertech",
   "files": ["dist"],
-  "types": "./dist/lib.d.ts",
+  "types": "./dist/lib.d.mts",
   "main":"./dist/jsaltt.umd.js",
   "module":"./dist/jsaltt.es.js",
   "exports": {
