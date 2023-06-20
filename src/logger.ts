@@ -4,7 +4,7 @@ class Logger {
   can_colorize: boolean;
 
   css_debug = "font-size: 12px; color: #999";
-  css_info = "font-size: 12px; color: black";
+  css_info = "font-size: 12px";
   css_warning = "font-size: 14px; color: orange; font-weight: bold";
   css_error = "font-size: 16px; color: red; font-weight: bold";
   css_critical = "font-size: 25px; color: red; font-weight: bold";
