@@ -1,5 +1,11 @@
 class Cookies {
-  create(name: string, value: any, days?: number, path?: string) {
+  create(
+    name: string,
+    value: any,
+    days?: number,
+    path?: string,
+    samesite = "Lax"
+  ) {
     if (typeof document === "undefined") return undefined;
     let p = path !== undefined ? path : "";
     let expires;
@@ -10,7 +16,7 @@ class Cookies {
     } else {
       expires = "";
     }
-    document.cookie = `${name}=${value}; expires=${expires}; path=${p}`;
+    document.cookie = `${name}=${value}; Expires=${expires}; Path=${p}; SameSite=${samesite}`;
     return true;
   }
   read(name: string) {
